@@ -1,0 +1,26 @@
+inherit_from:
+  - .rubocop_airbnb.yml
+
+# Rails用に最適化
+Rails:
+  Enabled: true
+
+# 文字数上限
+LineLength:
+  Max: 130
+
+AllCops:
+  #除外ファイル、フォルダの設定
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'node_modules/**/*'
+    - 'bin/*'
+    - '**/Gemfile'
+    - 'vendor/**/*'
+    - '.git/**/*'
+    - 'spec/**/*'
+
+    # bundle exec rubocop --require rubocop-airbnb
+    #以上実行でエラーチェック＆エラー内容書き出し完了
